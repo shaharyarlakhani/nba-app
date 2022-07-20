@@ -21,17 +21,17 @@ cursor = connect.cursor()
 
 # ----- nba players table -----
 
-cursor.execute("DROP TABLE IF EXISTS nba_players")
-players_table = """ CREATE TABLE nba_players (
-                id int NOT NULL PRIMARY KEY,
-                name varchar(255) NOT NULL,
-                api_id int NOT NULL,
-                api_team_id int NOT NULL,
-                jersey int
-            ); """
-cursor.execute(players_table)
-add_players = "INSERT INTO nba_players VALUES (?, ?, ?, ?, ?)"
-cursor.executemany(add_players, getPlayers2())
+# cursor.execute("DROP TABLE IF EXISTS nba_players")
+# players_table = """ CREATE TABLE nba_players (
+#                 id int NOT NULL PRIMARY KEY,
+#                 name varchar(255) NOT NULL,
+#                 api_id int NOT NULL,
+#                 api_team_id int NOT NULL,
+#                 jersey int
+#             ); """
+# cursor.execute(players_table)
+# add_players = "INSERT INTO nba_players VALUES (?, ?, ?, ?, ?)"
+# cursor.executemany(add_players, getPlayers2())
 
 # q = "SELECT * from nba_players WHERE api_team_id=1610612744"
 # cursor.execute(q)
